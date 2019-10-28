@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Header from './Components/Header'
+import Counter from './Components/Counter'
+
+// class App extends React.Component {
+//   render() {
+//     return <div>This is some JSX</div>
+//   }
+// }
 
 function App() {
+  // React.createElement('div', { className: 'App' }, [
+  //   React.createElement('header', { className: 'App-header' }[
+  //     React.createElement('img', { src: logo, className: 'App-logo', alt: 'logo' }, null)
+  //   ])
+  // ])
+
+  // < i > <b>Boo!</i></b >
+
+  //   React.createElement('i', null, [
+  //     React.createElement('b', null, 'Boo!')
+  //   ])
+
+  const [counterValue, setCounterValue] = useState(0)
+  const [counterValue2, setCounterValue2] = useState(0)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header>Hello, <code>World!</code></Header>
+      <Counter value={counterValue} setValue={setCounterValue} />
+
+      <Counter value={counterValue2} setValue={setCounterValue2} step={10} />
     </div>
   );
 }
 
 export default App;
+
