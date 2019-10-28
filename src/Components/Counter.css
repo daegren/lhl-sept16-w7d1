@@ -1,0 +1,14 @@
+.counter {
+  display: flex;
+  align-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.counter span {
+  margin: 0 0.5em;
+}
+
+.counter button {
+  height: 2em;
+
+}
